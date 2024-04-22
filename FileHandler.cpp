@@ -15,7 +15,7 @@ std::map<std::string, int> FileHandler::readItemsIntoMap() {
 
     // determines if the file opened properly
     if (!inFile) {
-        std::cerr << "Error opening input file: " << inputFileName << std::endl;  // outputs an error message
+        std::cerr << "Unable to open input file: " << inputFileName << std::endl;  // outputs an error message
         return itemFrequency;  // if the file isn't opened, this is shown
     }
 
@@ -33,7 +33,7 @@ void FileHandler::writeMapToFile(const std::map<std::string, int>& itemMap) {
     std::ofstream outFile(outputFileName);  // opens output for the provided file
     // sees if the file was opener
     if (!outFile) {
-        std::cerr << "Error opening output file: " << outputFileName << std::endl;  // error message
+        std::cerr << "Unable to open output file: " << outputFileName << std::endl;  // error message
         return;
     }
 
